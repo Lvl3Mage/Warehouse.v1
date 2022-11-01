@@ -1,0 +1,55 @@
+/* Vars:
+  ========================================================================== */
+
+// Fonts
+$textFont                : Oswald, sans-serif;
+$titleFont               : Russo One, sans-serif;
+
+
+// Screen sizes
+$desktopWidth            : 1440px;
+$smDesktopWidth          : 1200px;
+$tabletWidth             : 992px;
+$smTabletWidth           : 768px;
+$phoneWidth              : 576px;
+$smPhoneWidth            : 375px;
+
+
+//Font sizes
+
+$fontSizeXXL_desktop     : 64px;
+$fontSizeXXL_mobile      : 54px;
+
+$fontSizeXL_desktop      : 52px;
+$fontSizeXL_mobile       : 32px;
+
+$fontSizeL_desktop       : 36px;
+$fontSizeL_mobile        : 26px;
+
+$fontSizeM_desktop       : 30px;
+$fontSizeM_mobile        : 22px;
+
+$fontSizeS_desktop       : 22px;
+$fontSizeS_mobile        : 18px;
+
+$fontSizeXS_desktop      : 16px;
+$fontSizeXS_mobile       : 12px;
+
+
+// Main color
+$backgroundColor         : #FFF;
+$highlightColor          : #c83f37;//#E20918
+
+$primaryFontColor        : #000;
+$highlightedFontColor    : $highlightColor;
+$inverseFontColor        : #FFF;
+
+
+// Screen sizes
+$defFont                 : $textFont;
+$defFontColor            : $primaryFontColor;
+$defFontSize             : 22px;
+$defFontWeight           : 400;
+$defLineHeight           : 1.4;
+
+

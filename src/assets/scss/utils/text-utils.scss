@@ -1,0 +1,93 @@
+.text{
+	&--colored{
+		color: $highlightedFontColor;
+	}
+	&--highlighted{
+		background-color: $highlightColor;
+		color: $inverseFontColor;
+	}
+	&--300{
+		font-weight: 400;
+	}
+	&--400{
+		font-weight: 400;
+	}
+	&--500{
+		font-weight: 500;
+	}
+	&--700{
+		font-weight: 700;
+	}
+	&--XXL{
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeXXL_desktop, $fontSizeXXL_mobile);
+		&--static{
+			font-size: $fontSizeXXL_desktop;
+		}
+	}
+	&--XL{
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeXL_desktop, $fontSizeXL_mobile);
+		&--static{
+			font-size: $fontSizeXL_desktop;
+		}
+	}
+	&--L{
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeL_desktop, $fontSizeL_mobile);
+		&--static{
+			font-size: $fontSizeL_desktop;
+		}
+	}
+	&--M{
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeM_desktop, $fontSizeM_mobile);
+		&--static{
+			font-size: $fontSizeM_desktop;
+		}
+	}
+	&--S{
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeS_desktop, $fontSizeS_mobile);
+		&--static{
+			font-size: $fontSizeS_desktop;
+		}
+	}
+	&--XS{
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeXS_desktop, $fontSizeXS_mobile);
+		&--static{
+			font-size: $fontSizeXS_desktop;
+		}
+	}
+
+	&--uppercase{
+		text-transform: uppercase;
+	}
+	&--center{
+		text-align: center;
+	}
+	&--right{
+		text-align: right;
+	}
+	&--text-font{
+		font-family: $textFont;
+	}
+	&--title-font{
+		font-family: $titleFont;
+	}
+	&-spacing{
+		&--M{
+			letter-spacing: 0.05em;
+		}
+		&--L{
+			letter-spacing: 0.15em;
+		}
+
+	}
+	&-marker{
+		&--S{
+			li{
+				&::marker{
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+}
+
+

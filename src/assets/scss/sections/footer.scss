@@ -1,0 +1,154 @@
+.footer {
+	background: #BFBFBF;
+	&__top{
+		text-align: center;
+		font-family: 'Oswald';
+		font-style: normal;
+		font-weight: 400;
+		@include fSize($desktopWidth, $smTabletWidth, 20px, 14px);
+		line-height: 30px;
+		padding: 15px 0 ;
+	}
+	&__col-wrapper{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__left-col {
+		flex: 0 0 45%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media screen and (max-width: $smTabletWidth) {
+			flex-direction: column;
+		}
+		@media screen and (max-width: $phoneWidth) {
+			justify-content: center;
+			flex: auto;
+		}
+	}
+	&__text-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		@media screen and (max-width: $smTabletWidth) {
+			margin-bottom: 25px;
+		}
+		@media screen and (max-width: $phoneWidth) {
+			display: none;
+		}
+	}
+	&__text-line {
+		display: flex;
+		&--1 {
+		}
+		&--2 {
+			width: 100%;
+		}
+	}
+	&__text {
+		padding: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&>span{
+			padding: 5px;
+		}
+		&--1 {
+			font-family: 'Russo One';
+			font-style: normal;
+			font-weight: 400;
+			@include fSize($desktopWidth, $tabletWidth, 32px, 18px);
+			line-height: 1.2em;
+		}
+		&--2 {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 400;
+			@include fSize($desktopWidth, $tabletWidth, 30px, 16px);
+			line-height: 1.2em;
+			flex-direction: column;
+		}
+		&--3 {
+			text-align: center;
+			width: 100%;
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			@include fSize($desktopWidth, $tabletWidth, 36px, 16px);
+			line-height: 100%;
+			letter-spacing: 0.07em;
+			// margin-top: 15px;
+			span{
+				width: 100%;
+				padding-bottom: 10px;
+			}
+		}
+	}
+	&__logo {
+		img{
+			width: 200px;
+			height: auto;
+			@media screen and (max-width: $smTabletWidth) {
+				width: 170px;
+			}
+			@media screen and (max-width: $phoneWidth) {
+				width: 100%;
+			}
+		}
+	}
+	&__right-col {
+		flex: 0 0 45%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		@media screen and (max-width: $phoneWidth) {
+			flex: 1 0 250px;
+			align-items: start;
+			margin-left: 15px;
+			flex-direction: column-reverse;
+		}
+	}
+	&__contact-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__contact-icon {
+		width: 50px;
+		margin-right: 15px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__contacts {
+	}
+	&__contact {
+		&--1 {
+			font-family: 'Russo One';
+			font-style: normal;
+			font-weight: 400;
+			@include fSize($desktopWidth, $tabletWidth, 36px, 18px);
+			line-height: 1.2em;
+		}
+		&--2 {
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 500;
+			@include fSize($desktopWidth, $tabletWidth, 36px, 18px);
+			line-height: 1.2em;
+			letter-spacing: 0.09em;
+		}
+	}
+	&__bottom{
+		margin-top: 15px;
+		padding-bottom: 10px;
+		text-align: center;
+		font-family: 'Oswald';
+		font-style: normal;
+		font-weight: 400;
+		@include fSize($desktopWidth, $tabletWidth, 26px, 14px);
+	}
+}

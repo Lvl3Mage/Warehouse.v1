@@ -1,0 +1,115 @@
+.catalog-filters {
+	&__filters {
+		display: flex;
+		@media screen and (max-width: $smTabletWidth) {
+			flex-wrap: wrap;
+		}
+	}
+	&__filter-wrapper {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		@media screen and (max-width: $smTabletWidth) {
+			flex: 0 0 100%;
+		}
+		@media screen and (max-width: $phoneWidth) {
+			flex-direction: column;
+			margin-bottom: 15px;
+		}
+	}
+	&__filter-title {
+		font-family: 'Oswald';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 26px;
+		line-height: 24px;
+	}
+	&__filter {
+		flex-grow: 1;
+		padding: 10px;
+		position: relative;
+		@media screen and (max-width: $phoneWidth) {
+			width: 100%;
+		}
+		input{
+			width: 100%;
+			background: #FFFFFF;
+			border: none;
+			box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+			border-radius: 4px;
+			padding: 8px;
+			padding-right: 35px;
+			font-family: 'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 24px;
+
+		}
+	}
+	&__filter-units{
+		position: absolute;
+		font-family: 'Oswald';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		line-height: 24px;
+		right: calc(10px + 8px);
+		top: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__submit {
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__categories {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	&__category {
+		flex: 0 0 350px;
+		@media screen and (max-width: $tabletWidth) {
+			flex: 0 0 300px;
+		}
+		@media screen and (max-width: $phoneWidth) {
+			flex: 0 0 250px;
+		}
+		
+		padding: 15px;
+		margin: 15px;
+		min-width: auto;
+		// height: 515px;
+
+		background: #FFFFFF;
+		border: 1px solid #000000;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+		display: flex;
+		flex-direction: column;
+	}
+	&__category-image {
+		width: 100%;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__category-title {
+		margin-top: auto;
+		text-align: center;
+		font-family: 'Russo One';
+		font-style: normal;
+		font-weight: 400;
+		@include fSize($desktopWidth, $phoneWidth, 35px, 20px);
+		line-height: 1.3em;
+		letter-spacing: 0.06em;
+	}
+}
+.products {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}

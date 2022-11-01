@@ -1,0 +1,16 @@
+@mixin fSize($wmax, $wmin, $fmax, $fmin){
+  font-size: calc((100vw - #{strip-unit($wmin)}px)/(#{strip-unit($wmax)} - #{strip-unit($wmin)})*(#{strip-unit($fmax)} - #{strip-unit($fmin)}) + #{strip-unit($fmin)}px);
+  @media screen and (min-width: #{strip-unit($wmax)}px) {
+    font-size: #{strip-unit($fmax)}px;
+  }
+  @media screen and (max-width: #{strip-unit($wmin)}px) {
+    font-size: #{strip-unit($fmin)}px;
+  }
+}
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return  math.div($number, $number * 0 + 1);
+  }
+
+  @return $number;
+}
