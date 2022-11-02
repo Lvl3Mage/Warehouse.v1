@@ -1,3 +1,85 @@
+
+<div class="def-modal modal modal-bg" id="contact-modal">
+	<div class="def-modal__outer-container container">
+		<div class="def-modal__inner-container def-modal__inner-container--75">
+			<div class="def-modal__wrapper modal-window">
+				<div class="def-modal__top m--t-15">
+					<div class="def-modal__title text--400 text--blue text--L m--l-25 sm-m--l-0">
+						<span class="modal-title"></span>
+					</div>
+					<div class="def-modal__cross modal-cross">
+						<div class="def-modal__cross-line def-modal__cross-line--1"></div>
+						<div class="def-modal__cross-line def-modal__cross-line--2"></div>
+					</div>
+				</div>
+				<div class="def-modal__content-wrapper def-modal-class-name modal-content-wrapper">
+					<form class="validated-form form p--x-25 xsm-p--0" action="">
+						<div class="fx fx-wr--w fx-jc--sb m--t-25 m--b-25">
+							<div class="fx-el--45  sm-fx-el--100 p--5 fx fx-wr--w text--400 text--gray text--M m--b-25 validated-form-input form__input" data-validation-type="regex" data-validation-regex=".{1,}">
+								<div class="fx-el--100">
+									<input placeholder="Имя" class="input input--underscore" type="text">
+								</div>
+								<div class="form__input-invalid-message"><span>Введите имя</span></div>	
+							</div>
+							<div class="fx-el--45 sm-fx-el--100 p--5 fx fx-wr--w text--400 text--gray text--M m--b-25">
+								<div class="fx-el--100">
+									<input placeholder="Фамилия" class="input input--underscore" type="text">
+								</div>
+							</div>
+							<div class="fx-el--100  text--400 text--gray text--M m--b-25">
+								<div class="fx-el--100 text--gray text--400 text--M window-selector">
+									<div class="p--5 validated-form-input form__input" data-validation-type="regex" data-validation-regex=".{1,}">
+										<select class="select select--underscore" name="" value="">
+											<option value="" disabled selected hidden>Вид связи</option>
+											<option value="phone">Телефон</option>
+											<option value="whatsapp">Whatsapp</option>
+											<option value="telegram">Телеграм</option>
+											<option value="email">Email</option>
+										</select>
+										<div class="form__input-invalid-message"><span>Выберете способ связи</span></div>	
+									</div>
+									<div class="select-option-window p--5 m--t-15 validated-form-input form__input" data-validation-type="regex" data-validation-regex="^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[456789]\d{9}|(\d[ -]?){10}\d$" data-option-value="phone">
+										<input placeholder="Телефон" class="input input--underscore" type="tel">
+										<div class="form__input-invalid-message"><span>Введите действительный телефонный номер</span></div>
+									</div>
+									<div class="select-option-window p--5 m--t-15 validated-form-input form__input" data-validation-type="regex" data-validation-regex="^(?:(?:\+|0{0,2})91(\s*[\ -]\s*)?|[0]?)?[456789]\d{9}|(\d[ -]?){10}\d$" data-option-value="whatsapp">
+										<input placeholder="Whatsapp" class="input input--underscore" type="text">
+										<div class="form__input-invalid-message"><span>Введите действительный телефонный номер whatsapp</span></div>
+									</div>
+									<div class="select-option-window p--5 m--t-15 validated-form-input form__input" data-validation-type="regex" data-validation-regex=".*\B(?=\w{5,32}\b)[a-zA-Z0-9]+(?:_[a-zA-Z0-9]+)*.*" data-option-value="telegram">
+										<input placeholder="Телеграм" class="input input--underscore" type="text">
+										<div class="form__input-invalid-message"><span>Введите действительное имя пользователя</span></div>
+									</div>
+									<div class="select-option-window p--5 m--t-15 validated-form-input form__input" data-validation-type="regex" data-validation-regex="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" data-option-value="email">
+										<input placeholder="Email" class="input input--underscore" type="text">
+										<div class="form__input-invalid-message"><span>Введите действительный Email</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="fx p--5 md-fx-d--c">
+							<div class="fx fx-ai--c md-m--b-25 validated-form-input form__input m--r-35 sm-m--r-0" data-validation-type="css-selector" data-validation-selector=":has(input:checked)">
+								<div class="">
+									<input type="checkbox" class="m--r-15">
+									
+								</div>
+								<div class="text--gray text--400 text--XS">
+									<span>Я согласен с условиями использования моих персональных данных для обработки данного обращения</span>
+								</div>
+								<div class="form__input-invalid-message form__input-invalid-message--top-right">
+									<span>*</span>
+								</div>
+							</div>
+							<div class="fx fx-jc--c fx-ai--c">
+								<button class="btn" type="submit">Отправить</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
 <footer class="footer">
 	<div class="container">
 		<div class="footer__top">

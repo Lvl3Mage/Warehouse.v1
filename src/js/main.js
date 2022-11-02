@@ -152,3 +152,106 @@ function ResetTabs(){
 
 
 //END TABS
+//window-selector
+$(document).ready(function() {
+	$('.window-selector select').each(function(){
+		let windowSelector = $(this).closest('.window-selector');
+		let optionWindows = windowSelector.find('.select-option-window');
+		optionWindows.addClass('hidden');
+		for (var i = 0; i < optionWindows.length; i++) {
+			if($(optionWindows[i]).data('option-value') == this.value){
+				$(optionWindows[i]).removeClass('hidden');
+			}
+		}	
+	});
+	
+});
+$(document).on('change', '.window-selector select', function() {
+	let windowSelector = $(this).closest('.window-selector');
+	let optionWindows = windowSelector.find('.select-option-window');
+	optionWindows.addClass('hidden');
+	for (var i = 0; i < optionWindows.length; i++) {
+		if($(optionWindows[i]).data('option-value') == this.value){
+			$(optionWindows[i]).removeClass('hidden');
+		}
+	}
+});
+
+//Validated form
+
+
+const inputValidationLookup = {
+	"regex": {
+		validate: function(input){
+			if(input.hasClass('hidden')){
+				return true;
+			}
+			let regex = new RegExp(input.data('validation-regex'));
+			return regex.test(input.find('input, select>option:selected').val());
+		}
+	},
+	"css-selector": {
+		validate: function(input){
+			return input.is(input.data('validation-selector'));
+		}
+	},
+}
+$(document).on('submit', '.recaptcha-validated-form', function(e){
+	e.preventDefault();
+	let form = $(this);
+	let valid = ValidateForm(form);
+	if(valid){
+		grecaptcha.ready(function() {
+        	grecaptcha.execute(this.data('site-key'), {action: 'submit'}).then(function(token) {
+        		this[0].recaptchatoken.value = token;
+          		this[0].submit();
+        	}.bind(this));
+        }.bind(form));
+	}
+})
+$(document).on('submit', '.validated-form', function(e){
+	let form = $(this);
+	let valid = ValidateForm(form);
+	if(!valid){
+		e.preventDefault();
+	}
+});
+// $(document).ready(function(){
+// 	$('.validated-form').submit(function(e){
+		
+// 	});
+// });
+
+// $(document).on('submit', '.validated-form', function(e){
+// 	let form = $(this).closest('.validated-form');
+// 	let valid = ValidateForm(form);
+// 	console.log(valid);
+// 	// if(!valid){
+// 		e.preventDefault();
+// 	// }
+// });
+$(document).on('click input change', '.validated-form-input', function(){
+	$(this).removeClass('invalid');
+});
+function ValidateForm(form){
+	let inputs = form.find('.validated-form-input');
+	// let type = 
+	let validated = true;
+	for (var i = 0; i < inputs.length; i++) {
+		let input = $(inputs[i]);
+		let type = input.data('validation-type');
+		let inputValid = inputValidationLookup[type].validate(input);
+		if(!inputValid){
+			input.addClass('invalid')
+		}
+		validated = validated && inputValid;
+		// console.log(inputs[i], $(inputs[i]).data('valid-selector'), $(inputs[i]).is($(inputs[i]).data('valid-selector')));
+		// let rInput = $(inputs[i]).find('input[value=""]');
+		// if(rInput.length == 0){
+		// 	console.log("empty input in ",inputs[i]);
+		// }
+		
+	}
+	return validated;
+	// form.find(form.data('submit-button-selector')).attr("disabled", !validated);
+}
