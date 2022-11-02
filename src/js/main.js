@@ -12,7 +12,6 @@ $(document).ready(function(){
 	$(".def-slider-3").slick({
 		arrows:true,
 		dots:true,
-		focusOnSelect: true,
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
