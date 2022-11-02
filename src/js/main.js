@@ -12,6 +12,7 @@ $(document).ready(function(){
 	$(".def-slider-3").slick({
 		arrows:true,
 		dots:true,
+		focusOnSelect: true,
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
@@ -30,6 +31,40 @@ $(document).ready(function(){
 				}
 			}
 		]
+	});
+	$(".review-slider-sec").slick({
+		asNavFor: '.review-slider-main',
+		arrows:true,
+		focusOnSelect: true,
+		centerMode: true,
+		dots:true,
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+	$(".review-slider-main").slick({
+		asNavFor: '.review-slider-sec',
+		arrows:false,
+		dots:false,
+		fade: true,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
 	});
 });
 

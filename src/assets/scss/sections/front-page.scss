@@ -36,6 +36,14 @@
 	}
 }
 .video {
+	width: 100%;
+	&--50{
+		margin: auto;
+		width: 50%;
+		@media screen and (max-width:$tabletWidth){
+			width: 100%;
+		}
+	}
 	position: relative;
 	line-height: 0;
 	&>img{
@@ -72,6 +80,20 @@
 	justify-content: space-around;
 	align-items: center;
 	&__advantage {
+		&--tab{
+			cursor: pointer;
+			transition: all 0.3s;
+			&:hover{
+				transition: all 0.3s cubic-bezier(.4,.35,0.5,2);
+				transform: scale(1.1);
+				filter: drop-shadow(0px 0px 5px #aaa);
+			}
+			&.active{
+				filter: drop-shadow(0px 0px 15px #aaa);
+				transform: scale(1.2);
+				transition: all 0.3s;
+			}
+		}
 		padding: 15px;
 		@media screen and (max-width: $smDesktopWidth) {
 			flex: 0 0 50%;
@@ -191,6 +213,9 @@
 	}
 	width: 315px;
 	height: 530px;
+	&--free-resize{
+		height: auto;
+	}
 	@media screen and (max-width: 400px) {
 		width: 100%;
 		height: auto;
@@ -219,18 +244,10 @@
 		line-height: 14px;
 	}
 	&__preview {
-		flex: 0 0 50%;
-		@media screen and (max-width: 400px) {
+		line-height: 0;
+		img{
 			width: 100%;
 			height: auto;
-		}
-		img{
-			height: 100%;
-			width: auto;
-			@media screen and (max-width: 400px) {
-				width: 100%;
-				height: auto;
-			}
 		}
 	}
 	&__title {

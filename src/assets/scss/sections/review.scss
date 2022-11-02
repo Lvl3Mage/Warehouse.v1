@@ -1,0 +1,43 @@
+.review-slider-main {
+	&__slide {}
+	&__review {}
+}
+.main-review {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	&__info {
+		flex: 0 0 30%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		@media screen and (max-width: $smTabletWidth) {
+			flex: 0 0 100%;
+			order: 1;
+		}
+
+	}
+	&__video {
+		flex: 0 0 65%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media screen and (max-width: $smTabletWidth) {
+			flex: 0 0 100%;
+			order: 0;
+		}
+	}
+	&__description {
+		flex: 0 0 100%;
+		@media screen and (max-width: $smTabletWidth) {
+			order: 2;
+		}
+	}
+}
+.advantage-window{
+	display: none;
+	&.active{
+		display: block;
+	}
+}
