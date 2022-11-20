@@ -103,7 +103,7 @@
 		font-family: 'Russo One';
 		font-style: normal;
 		font-weight: 400;
-		@include fSize($desktopWidth, $phoneWidth, 35px, 20px);
+		@include fSize($desktopWidth, $phoneWidth, 26px, 18px);
 		line-height: 1.3em;
 		letter-spacing: 0.06em;
 	}

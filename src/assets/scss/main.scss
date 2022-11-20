@@ -98,7 +98,7 @@
 		}
 		&--50{
 			width: 50%;
-			@media screen and (max-width: 992px) {
+			@media screen and (max-width: $tabletWidth) {
 				width: 75%;
 			}
 			@media screen and (max-width: 772px) {
@@ -240,7 +240,7 @@ input{
 			}
 		}
 		&.invalid{
-			animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+			animation: shake 0.82s cubic-bezier($fontSizeXL_desktop,.07,.19,.97) both;
 			transform: translate3d(0, 0, 0);
 			backface-visibility: hidden;
 			perspective: 1000px;
@@ -277,4 +277,98 @@ input{
 }
 .hidden{
 	display: none;
+}
+.def-text-wrapper{
+	color: $primaryFontColor;
+	margin-bottom: 45px;
+	&>img{
+		width: 33%;
+	    float: right;
+	    border-radius: 5px;
+	    margin: 15px;
+	}
+	a{
+		text-decoration: underline !important;
+		color: #0000EE !important;
+		cursor: pointer;
+	}
+	h1{
+		font-weight: 700;
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeXL_desktop, $fontSizeXL_mobile);
+		line-height: 1.1em;
+		text-transform: none;
+	}
+	h2{
+		font-weight: 700;
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeXL_desktop, $fontSizeXL_mobile);
+		line-height: 1.1em;
+	}
+	h3{
+		font-weight: 700;
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeM_desktop, $fontSizeM_mobile);
+	}
+	h4{
+		font-weight: 400;
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeS_desktop , $fontSizeS_mobile);
+		line-height: 1.1em;
+		
+	}
+	b{
+		color: $highlightedFontColor;
+		font-weight: inherit;
+		a{
+			color: $highlightedFontColor !important;
+		}
+		li{
+			&:marker{
+				color: $highlightedFontColor !important;
+			}
+		}
+	}
+	strong{
+		font-family: $titleFont;
+		font-weight: inherit;
+	}
+	mark{
+		color: $inverseFontColor;
+		background-color: $highlightColor;
+		font-weight: inherit;
+		padding: 0 0.2em;
+		a{
+			color: $inverseFontColor !important;
+		}
+	}
+	p{
+		font-weight: 400;
+		@include fSize($tabletWidth, $phoneWidth, $fontSizeXS_desktop, $fontSizeXS_mobile);
+		line-height: 1.1em;
+		color: $primaryFontColor;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		font-family: $textFont;
+	}
+	ul,ol{
+		li{
+			font-weight: 400;
+			@include fSize($tabletWidth, $phoneWidth, $fontSizeXS_desktop, $fontSizeXS_mobile);
+			line-height: 1.1em;
+			position: relative;
+			margin: 10px 0;
+			// margin-left: 40px;
+			// &:before{
+			// 	content: "";
+			// 	position: absolute;
+			// 	// width: 0.7em;
+			// 	// height: 0.7em;
+			// 	width: 10px;
+			// 	height: 10px;
+			// 	top: 0;
+			// 	bottom: 0;
+			// 	left: -25px;
+			// 	margin: auto;
+			// 	background: #00A3E0;
+			// 	border-radius: 50%;
+			// }
+		}
+	}
 }
