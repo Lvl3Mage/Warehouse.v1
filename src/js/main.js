@@ -2,6 +2,17 @@ import './libs/slick.js'
 var $ = require( "jquery" );
 
 $(document).ready(function(){
+	$(".banner-slider").slick({
+		arrows:false,
+		dots:true,
+		fade: true,
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 4000,
+		pauseOnHover: true,
+	});
 	$(".def-slider-1").slick({
 		arrows:true,
 		dots:true,
