@@ -13,7 +13,7 @@ const PATHS = {
     dist: path.join(__dirname, 'dist'),
     assets: 'assets/',
     fonts: 'assets/fonts/',
-    images: 'assets/img/',
+    images: 'assets/images/',
     js: 'js/',
     css: 'css/',
 }

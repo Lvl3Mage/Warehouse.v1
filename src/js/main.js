@@ -208,13 +208,15 @@ $(document).on('submit', '.recaptcha-validated-form', function(e){
         }.bind(form));
 	}
 })
-$(document).on('submit', '.validated-form', function(e){
-	let form = $(this);
+$(document).on('click', '.validated-form-btn', function(e){
+	let form = $(this).parents('.validated-form');
+	console.log(form);
 	let valid = ValidateForm(form);
 	if(!valid){
 		e.preventDefault();
 	}
 });
+
 // $(document).ready(function(){
 // 	$('.validated-form').submit(function(e){
 		

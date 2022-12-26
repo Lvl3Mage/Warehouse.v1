@@ -4,7 +4,7 @@
   "description": "Basic configuration of Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "export NODE_OPTIONS=--openssl-legacy-provider; cross-env NODE_ENV=development webpack serve",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider; cross-env NODE_ENV=development webpack serve --host 0.0.0.0",
     "dev": "export NODE_OPTIONS=--openssl-legacy-provider; cross-env NODE_ENV=development webpack",
     "build": "export NODE_OPTIONS=--openssl-legacy-provider; cross-env NODE_ENV=production webpack"
   },

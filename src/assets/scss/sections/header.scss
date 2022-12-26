@@ -275,6 +275,9 @@
 			filter: brightness(0.9);
 		}
 	}
+	&__cart-button {
+		position: relative;
+	}
 	&__bottom-cart-icon {
 		height: 1em;
 		line-height: 0;
@@ -282,6 +285,27 @@
 			height: 100%;
 			width: auto;
 		}
+	}
+	&__bottom-cart-count {
+	    position: absolute;
+	    width: 1.2em;
+	    height: 1.2em;
+	    text-align: center;
+	    background: #FFF;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    border-radius: 50%;
+	    border: 2px solid #c83f37;
+	    top: -9px;
+	    right: -10px;
+	    span {
+		    display: block;
+		    height: 1em;
+		    font-size: 13px;
+		    line-height: 1em;
+		    margin-left: 0.2em;
+	    }
 	}
 	&__nav-mobile {
 		@media screen and (min-width: $smTabletWidth) {

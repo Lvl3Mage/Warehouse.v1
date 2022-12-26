@@ -27,6 +27,7 @@
 	&__item-cross {
 		cursor: pointer;
 		transition: all 0.3s;
+		display: inline-block;
 		&:active{
 			filter: brightness(0.8);
 		}
@@ -65,6 +66,11 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 			img{
 				width: 60%;
 				height: auto;
@@ -83,6 +89,9 @@
 		}
 	}
 	&__item-count {
+		input {
+			width: 3em;
+		}
 		display: flex;
 		align-items: center;
 	}

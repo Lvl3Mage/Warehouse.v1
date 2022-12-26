@@ -19,6 +19,16 @@
 @import 'sections/delivery';
 @import 'sections/review';
 @import 'sections/footer';
+
+.notice {
+	&__wrapper{
+	}
+	&__notice {
+		display: inline-block;
+		padding: 0 5px 3px;
+	}
+}
+
 .btn {
 	border: none;
 	background: $highlightColor;
@@ -370,5 +380,10 @@ input{
 			// 	border-radius: 50%;
 			// }
 		}
+	}
+	table {
+			font-weight: 400;
+			@include fSize($tabletWidth, $phoneWidth, $fontSizeXS_desktop, $fontSizeXS_mobile);
+			line-height: 1.1em;
 	}
 }
